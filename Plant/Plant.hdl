@@ -1,0 +1,17 @@
+CHIP Plant{
+	IN a, b, c ;
+	OUT out;
+
+	PARTS:
+	/*
+	And (a = a, b = b, out = out1);
+	Not (in = c, out = outNot);
+	And (a = out1, b = outNot, out = out2);
+
+	And(a = out1, b = c, out = out3);
+	Or ( a = out2, b = out3, out = out);
+	*/
+
+	And (a = a, b = b, out = out1);
+	And (a = out1, b = true, out = out);
+}
